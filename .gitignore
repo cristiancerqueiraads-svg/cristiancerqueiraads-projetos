@@ -1,0 +1,13 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Python HTTP server
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

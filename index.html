@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio de Cristian Cerqueira - Desenvolvedor Full Stack" />
+  <title>Cristian Cerqueira | Portfólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#hero" class="header__logo"><CC /></a>
+      <nav class="header__nav">
+        <a href="#hero">Início</a>
+        <a href="#about">Sobre</a>
+        <a href="#projects">Projetos</a>
+        <a href="#projetos-cards">Detalhes</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+        <svg class="theme-toggle__icon theme-toggle__icon--sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="theme-toggle__icon theme-toggle__icon--moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="hero__tag">Desenvolvedor Full Stack</span>
+          <h1 class="hero__title">
+            Olá, eu sou <strong>Cristian Cerqueira</strong>
+          </h1>
+          <p class="hero__subtitle">
+            Estudante de Análise e Desenvolvimento de Sistemas apaixonado por tecnologia, automações, desenvolvimento web e soluções que realmente resolvem problemas do dia a dia.
+          </p>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">Ver Projetos</a>
+            <a href="#about" class="btn btn--ghost">Sobre Mim</a>
+          </div>
+        </div>
+        <div class="hero__image">
+          <img src="assets/images/CristianCerqueira.png" alt="Cristian Cerqueira" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SOBRE MIM ===== -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section__title">Sobre Mim</h2>
+        <p class="section__subtitle">
+          <em>"Eu gosto de construir sistemas que saem do papel e realmente funcionam no mundo real."</em>
+        </p>
+
+        <div class="about__grid">
+          <div class="about__text">
+            <p>
+              Meu nome é Cristian Cerqueira e eu gosto de criar sistemas úteis. Não curto fazer projeto "só por fazer". Gosto de construir coisas que possam virar produto, ajudar empresas, otimizar processos ou até gerar renda real.
+            </p>
+            <p>
+              Hoje estou em transição de carreira para a área tech, trazendo comigo uma bagagem muito forte de disciplina, metas, trabalho sob pressão e resolução de problemas adquiridas na indústria, atendimento e operações. Sempre fui o tipo de pessoa que aprende fazendo, então grande parte do meu conhecimento veio construindo projetos reais, quebrando a cabeça em backend, banco de dados, VPS, Docker, automações e experiência do usuário.
+            </p>
+            <p>
+              Atualmente foco meus estudos e projetos em <strong>desenvolvimento Full Stack</strong>, automações, análise de dados e criação de sistemas comerciais.
+            </p>
+            <p>
+              Tenho facilidade em aprender rápido, me adaptar e resolver problemas complexos na prática. Acredito muito que tecnologia precisa resolver problemas reais.
+            </p>
+          </div>
+
+          <div class="about__highlights">
+            <div class="about__funny">
+              <img src="assets/images/engraçado.jpg" alt="Cristian Cerqueira - momento engraçado" />
+            </div>
+            <div class="highlight-card">
+              <h3>🎯 Mentalidade</h3>
+              <ul>
+                <li>Experiência do usuário</li>
+                <li>Escalabilidade</li>
+                <li>Monetização</li>
+                <li>Performance</li>
+                <li>Automação</li>
+              </ul>
+            </div>
+            <div class="highlight-card">
+              <h3>🛠️ Experiência Prática</h3>
+              <ul>
+                <li>Desenvolvimento Full Stack</li>
+                <li>APIs REST</li>
+                <li>Deploy em VPS Linux</li>
+                <li>Docker</li>
+                <li>UI/UX moderno</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills – Marquee Animado -->
+        <div class="skills">
+          <h3 class="skills__title">Áreas de conhecimento</h3>
+          <div class="skills__marquee">
+
+            <!-- Linha 1 – Frontend -->
+            <div class="skills__track">
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/html-124-svgrepo-com.svg" alt="HTML5" /> HTML5</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/css3-02-svgrepo-com.svg" alt="CSS3" /> CSS3</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/javascript-155-svgrepo-com.svg" alt="JavaScript" /> JavaScript</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/typescript-svgrepo-com.svg" alt="TypeScript" /> TypeScript</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/react-javascript-js-framework-facebook-svgrepo-com.svg" alt="React" /> React</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/nextjs-icon-svgrepo-com.svg" alt="Next.js" /> Next.js</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/tailwind-css-svgrepo-com.svg" alt="TailwindCSS" /> TailwindCSS</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/framer-motion.svg" alt="Framer Motion" /> Framer Motion</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/tanstack%20query.svg" alt="TanStack Query" /> TanStack Query</div>
+
+              <!-- Duplicate for seamless loop -->
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/html-124-svgrepo-com.svg" alt="HTML5" /> HTML5</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/css3-02-svgrepo-com.svg" alt="CSS3" /> CSS3</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/javascript-155-svgrepo-com.svg" alt="JavaScript" /> JavaScript</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/typescript-svgrepo-com.svg" alt="TypeScript" /> TypeScript</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/react-javascript-js-framework-facebook-svgrepo-com.svg" alt="React" /> React</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/nextjs-icon-svgrepo-com.svg" alt="Next.js" /> Next.js</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/tailwind-css-svgrepo-com.svg" alt="TailwindCSS" /> TailwindCSS</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/framer-motion.svg" alt="Framer Motion" /> Framer Motion</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/tanstack%20query.svg" alt="TanStack Query" /> TanStack Query</div>
+            </div>
+
+            <!-- Linha 2 – Backend + Banco -->
+            <div class="skills__track skills__track--reverse">
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/node-js-svgrepo-com.svg" alt="Node.js" /> Node.js</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/nestjs-svgrepo-com.svg" alt="NestJS" /> NestJS</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/express-com.svg" alt="Express" /> Express</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/rest-api-svgrepo-com.svg" alt="APIs REST" /> APIs REST</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/icons8-jwt.svg" alt="JWT" /> JWT</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/postgresql-svgrepo-com.svg" alt="PostgreSQL" /> PostgreSQL</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/prisma-svgrepo-com.svg" alt="Prisma ORM" /> Prisma ORM</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/sqlite-svgrepo-com.svg" alt="SQLite" /> SQLite</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/mysql-svgrepo-com.svg" alt="MySQL" /> MySQL</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/mongodb-svgrepo-com.svg" alt="MongoDB" /> MongoDB</div>
+
+              <!-- Duplicate -->
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/node-js-svgrepo-com.svg" alt="Node.js" /> Node.js</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/nestjs-svgrepo-com.svg" alt="NestJS" /> NestJS</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/express-com.svg" alt="Express" /> Express</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/rest-api-svgrepo-com.svg" alt="APIs REST" /> APIs REST</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/icons8-jwt.svg" alt="JWT" /> JWT</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/postgresql-svgrepo-com.svg" alt="PostgreSQL" /> PostgreSQL</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/prisma-svgrepo-com.svg" alt="Prisma ORM" /> Prisma ORM</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/sqlite-svgrepo-com.svg" alt="SQLite" /> SQLite</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/mysql-svgrepo-com.svg" alt="MySQL" /> MySQL</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/mongodb-svgrepo-com.svg" alt="MongoDB" /> MongoDB</div>
+            </div>
+
+            <!-- Linha 3 – Infra + Automação -->
+            <div class="skills__track skills__track--slow">
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/docker-svgrepo-com.svg" alt="Docker" /> Docker</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/docker-svgrepo-com.svg" alt="Docker Compose" /> Docker Compose</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/ubuntu-svgrepo-com.svg" alt="VPS Ubuntu" /> VPS Ubuntu</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/nginx-16-svgrepo-com.svg" alt="Nginx" /> Nginx</div>
+              <div class="skills__chip">SSL/HTTPS</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/git-svgrepo-com.svg" alt="Git" /> Git</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/ci-cd-svgrepo-com.svg" alt="CI/CD" /> CI/CD</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/python-127-svgrepo-com.svg" alt="Python" /> Python</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/numpy-svgrepo-com.svg" alt="NumPy" /> NumPy</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/pandas-svgrepo-com.svg" alt="Pandas" /> Pandas</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/n8n-color.svg" alt="n8n" /> n8n</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/Power-BI.svg" alt="Power BI" /> Power BI</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/excel-svgrepo-com.svg" alt="Excel" /> Excel</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/dashboards.svg" alt="Dashboards" /> Dashboards</div>
+
+              <!-- Duplicate -->
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/docker-svgrepo-com.svg" alt="Docker" /> Docker</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/docker-svgrepo-com.svg" alt="Docker Compose" /> Docker Compose</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/ubuntu-svgrepo-com.svg" alt="VPS Ubuntu" /> VPS Ubuntu</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/nginx-16-svgrepo-com.svg" alt="Nginx" /> Nginx</div>
+              <div class="skills__chip">SSL/HTTPS</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/git-svgrepo-com.svg" alt="Git" /> Git</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/ci-cd-svgrepo-com.svg" alt="CI/CD" /> CI/CD</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/python-127-svgrepo-com.svg" alt="Python" /> Python</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/numpy-svgrepo-com.svg" alt="NumPy" /> NumPy</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/pandas-svgrepo-com.svg" alt="Pandas" /> Pandas</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/n8n-color.svg" alt="n8n" /> n8n</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/Power-BI.svg" alt="Power BI" /> Power BI</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/excel-svgrepo-com.svg" alt="Excel" /> Excel</div>
+              <div class="skills__chip"><img class="skills__chip-icon" src="assets/icons/dashboards.svg" alt="Dashboards" /> Dashboards</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJETOS (Story principal) ===== -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section__title">Projetos</h2>
+        <p class="section__subtitle">
+          Conheça meus principais projetos em formato de stories.
+        </p>
+
+        <div class="story-mockup">
+          <div id="progress-bar" role="progressbar" aria-label="Progresso dos slides"></div>
+
+          <div id="story-container" role="main" aria-label="Apresentação de projetos">
+            <img id="story-image" src="" alt="Slide do projeto" />
+            <div id="story-overlay">
+              <div id="story-info">
+                <h2 id="story-title"></h2>
+                <p id="story-description"></p>
+                <div id="story-techs"></div>
+              </div>
+            </div>
+          </div>
+
+          <button id="nav-prev" class="nav-btn" aria-label="Slide anterior">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button id="nav-next" class="nav-btn" aria-label="Próximo slide">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+
+          <button id="play-pause-btn" aria-label="Pausar autoplay">
+            <svg id="play-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="6" y="4" width="4" height="16" rx="1"></rect>
+              <rect x="14" y="4" width="4" height="16" rx="1"></rect>
+            </svg>
+            <svg id="pause-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="display:none;">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+          </button>
+
+          <div id="touch-left" aria-hidden="true"></div>
+          <div id="touch-right" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJETOS EM CARDS COM FILTRO ===== -->
+    <section id="projetos-cards" class="project-filter">
+      <div class="container">
+        <h2 class="section__title">Projetos</h2>
+        <p class="section__subtitle">
+          Conheça os detalhes de cada projeto.
+        </p>
+
+        <!-- Barra de abas/filtro -->
+        <div class="project-filter__bar" role="tablist">
+          <button class="project-filter__btn active" data-filter="all" role="tab" aria-selected="true">Projetos</button>
+          <button class="project-filter__btn" data-filter="voltin" role="tab" aria-selected="false">VOLTIN</button>
+          <button class="project-filter__btn" data-filter="financas" role="tab" aria-selected="false">FINANÇAS</button>
+          <button class="project-filter__btn" data-filter="oficina" role="tab" aria-selected="false">Oficina</button>
+        </div>
+
+        <!-- Grid de cards -->
+        <div class="project-filter__grid">
+
+          <!-- Card VOLTIN -->
+          <div class="project-card" data-project="voltin" id="projeto-voltin">
+            <div class="project-card__info">
+              <span class="project-card__tag">Projeto 01</span>
+              <h3 class="project-card__title">VOLTIN Climatização</h3>
+              <p class="project-card__desc">
+                Sistema Full Stack desenvolvido para uma empresa real do segmento de climatização. O projeto foi pensado para entregar uma experiência moderna, rápida e profissional, incluindo frontend, backend, banco de dados e deploy completo em VPS Linux.
+              </p>
+              <div class="project-card__features">
+                <h4>📋 O que o sistema possui</h4>
+                <ul>
+                  <li>Área administrativa</li>
+                  <li>Login e autenticação</li>
+                  <li>Cadastro de serviços</li>
+                  <li>API REST</li>
+                  <li>Banco PostgreSQL</li>
+                  <li>Dockerização completa</li>
+                  <li>Deploy em produção com SSL/HTTPS</li>
+                </ul>
+              </div>
+              <div class="project-card__techs">
+                <span data-tech="nextjs">Next.js</span><span data-tech="typescript">TypeScript</span><span data-tech="tailwindcss">TailwindCSS</span>
+                <span data-tech="framer motion">Framer Motion</span><span data-tech="tanstack query">TanStack Query</span>
+                <span data-tech="nestjs">NestJS</span><span data-tech="prisma">Prisma</span><span data-tech="postgresql">PostgreSQL</span><span data-tech="docker">Docker</span>
+              </div>
+            </div>
+            <div class="project-card__carousel" data-project="1">
+              <div class="carousel__viewport">
+                <img class="carousel__img" src="" alt="Screenshot VOLTIN" />
+                <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">‹</button>
+                <button class="carousel__btn carousel__btn--next" aria-label="Próximo">›</button>
+              </div>
+              <div class="carousel__dots"></div>
+            </div>
+          </div>
+
+          <!-- Card FINANÇAS PRO -->
+          <div class="project-card" data-project="financas" id="projeto-financas">
+            <div class="project-card__info">
+              <span class="project-card__tag">Projeto 02</span>
+              <h3 class="project-card__title">FINANÇAS PRO</h3>
+              <p class="project-card__desc">
+                Dashboard financeiro moderno criado para gerenciamento financeiro pessoal e empresarial. O objetivo era criar um sistema bonito, rápido e funcional para acompanhar receitas, despesas, saldo, categorias, investimentos e ativos financeiros em tempo real.
+              </p>
+              <div class="project-card__features">
+                <h4>📋 Funcionalidades</h4>
+                <ul>
+                  <li>Dashboard financeiro completo</li>
+                  <li>Controle de entradas e saídas</li>
+                  <li>Gráficos dinâmicos</li>
+                  <li>Categorias customizadas</li>
+                  <li>Integração com ativos financeiros</li>
+                  <li>Busca de preços de ações e criptomoedas</li>
+                  <li>Controle mensal</li>
+                </ul>
+              </div>
+              <div class="project-card__techs">
+                <span data-tech="nextjs">Next.js</span><span data-tech="react">React</span><span data-tech="typescript">TypeScript</span>
+                <span data-tech="tailwindcss">TailwindCSS</span><span data-tech="nodejs">Node.js</span><span data-tech="express">Express</span>
+                <span data-tech="yahoo finance">Yahoo Finance API</span><span data-tech="coingecko">CoinGecko API</span>
+              </div>
+            </div>
+            <div class="project-card__carousel" data-project="2">
+              <div class="carousel__viewport">
+                <img class="carousel__img" src="" alt="Screenshot FINANÇAS" />
+                <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">‹</button>
+                <button class="carousel__btn carousel__btn--next" aria-label="Próximo">›</button>
+              </div>
+              <div class="carousel__dots"></div>
+            </div>
+          </div>
+
+          <!-- Card OFICINA -->
+          <div class="project-card" data-project="oficina" id="projeto-oficina">
+            <div class="project-card__info">
+              <span class="project-card__tag">Projeto 03</span>
+              <h3 class="project-card__title">Sistema de Gestão para Oficinas</h3>
+              <p class="project-card__desc">
+                Projeto desenvolvido pensando em oficinas mecânicas e empresas que precisam de um sistema leve, rápido e funcional. A ideia principal foi unir a facilidade do desenvolvimento web com a praticidade de um sistema desktop instalável com Electron.
+              </p>
+              <div class="project-card__features">
+                <h4>📋 Funcionalidades</h4>
+                <ul>
+                  <li>Cadastro de clientes</li>
+                  <li>Cadastro de veículos</li>
+                  <li>Ordem de serviço</li>
+                  <li>Controle financeiro</li>
+                  <li>Histórico de manutenção</li>
+                  <li>Sistema offline</li>
+                  <li>Sincronização futura com versão online</li>
+                </ul>
+              </div>
+              <div class="project-card__techs">
+                <span data-tech="electron">Electron</span><span data-tech="html">HTML</span><span data-tech="css">CSS</span>
+                <span data-tech="javascript">JavaScript</span><span data-tech="nodejs">Node.js</span>
+              </div>
+            </div>
+            <div class="project-card__carousel" data-project="3">
+              <div class="carousel__viewport">
+                <img class="carousel__img" src="" alt="Screenshot Oficina" />
+                <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">‹</button>
+                <button class="carousel__btn carousel__btn--next" aria-label="Próximo">›</button>
+              </div>
+              <div class="carousel__dots"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; 2026 Cristian Cerqueira. Feito com dedicação.</p>
+      <div class="footer__links">
+        <a href="https://github.com/cristiancerqueira" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/cristiancerqueira" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== LIGHTBOX MODAL ===== -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <div class="lightbox__backdrop" id="lightbox-backdrop"></div>
+    <button class="lightbox__close" id="lightbox-close" aria-label="Fechar">✕</button>
+    <img class="lightbox__img" id="lightbox-img" src="" alt="Imagem ampliada" />
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
