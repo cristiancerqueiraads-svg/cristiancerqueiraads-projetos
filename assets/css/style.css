@@ -59,6 +59,25 @@
   --header-bg: rgba(237, 241, 245, 0.88);
 }
 
+/* Ajuste na sobreposição do story no modo claro — overlay mais escuro */
+[data-theme="light"] #story-overlay {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.55) 25%, rgba(0, 0, 0, 0.65));
+}
+
+[data-theme="light"] #story-title {
+  color: #ffffff;
+}
+
+[data-theme="light"] #story-description {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+[data-theme="light"] .tech-badge {
+  background: rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
 [data-theme="light"] .highlight-card,
 [data-theme="light"] .project-card,
 [data-theme="light"] .skills__chip,
