@@ -268,23 +268,33 @@ function togglePlay() {
    Keyboard
    ============================================ */
 function handleKeydown(e) {
+  const lbOpen = lightboxDom.el.classList.contains('open');
+
   switch (e.key) {
     case 'ArrowRight':
       e.preventDefault();
-      navigate('next');
+      if (lbOpen) {
+        lightboxNavigate('next');
+      } else {
+        navigate('next');
+      }
       break;
     case 'ArrowLeft':
       e.preventDefault();
-      navigate('prev');
+      if (lbOpen) {
+        lightboxNavigate('prev');
+      } else {
+        navigate('prev');
+      }
       break;
     case 'Escape': {
-      const lbOpen = lightboxDom.el.classList.contains('open');
       if (!lbOpen) break;
       e.preventDefault();
       closeLightbox();
       break;
     }
     case ' ':
+      if (lbOpen) break;
       e.preventDefault();
       togglePlay();
       break;
@@ -414,6 +424,20 @@ const lightboxDom = {
   img: document.getElementById('lightbox-img'),
   close: document.getElementById('lightbox-close'),
   backdrop: document.getElementById('lightbox-backdrop'),
+  prev: document.getElementById('lightbox-prev'),
+  next: document.getElementById('lightbox-next'),
+};
+
+// Track current context inside lightbox
+const lightboxCtx = {
+  /** 'carousel' | 'story' | 'funny' | null */
+  source: null,
+  /** project id (only for carousel) */
+  projectId: null,
+  /** current slide index within the source's image list */
+  slideIndex: 0,
+  /** list of image URLs for navigation */
+  images: [],
 };
 
 function openLightbox(src) {
@@ -426,14 +450,42 @@ function openLightbox(src) {
 function closeLightbox() {
   lightboxDom.el.classList.remove('open');
   lightboxDom.el.setAttribute('aria-hidden', 'true');
-  // Clear src after transition so browser doesn't keep it in memory
+  lightboxCtx.source = null;
+  lightboxCtx.projectId = null;
+  lightboxCtx.slideIndex = 0;
+  lightboxCtx.images = [];
   setTimeout(() => { lightboxDom.img.src = ''; }, 300);
+}
+
+function lightboxNavigate(dir) {
+  if (lightboxCtx.images.length === 0) return;
+
+  if (dir === 'next') {
+    lightboxCtx.slideIndex = (lightboxCtx.slideIndex + 1) % lightboxCtx.images.length;
+  } else {
+    lightboxCtx.slideIndex = (lightboxCtx.slideIndex - 1 + lightboxCtx.images.length) % lightboxCtx.images.length;
+  }
+
+  lightboxDom.img.src = lightboxCtx.images[lightboxCtx.slideIndex];
 }
 
 function setupLightboxTriggers() {
   // All carousel images (project detail slides & project cards)
   document.querySelectorAll('.carousel__viewport img').forEach((img) => {
     img.addEventListener('click', (e) => {
+      const carousel = e.currentTarget.closest('.project-card__carousel, .project-detail__carousel');
+      const projectId = parseInt(carousel?.dataset?.project, 10);
+      const images = carouselImageMap[projectId] || [];
+
+      lightboxCtx.source = 'carousel';
+      lightboxCtx.projectId = projectId;
+      lightboxCtx.images = images;
+
+      // Find current index from image src
+      const currentSrc = e.currentTarget.src;
+      const idx = images.findIndex((imgPath) => currentSrc.includes(imgPath));
+      lightboxCtx.slideIndex = idx >= 0 ? idx : 0;
+
       openLightbox(e.currentTarget.src);
     });
   });
@@ -442,6 +494,8 @@ function setupLightboxTriggers() {
   const funnyImg = document.querySelector('.about__funny img');
   if (funnyImg) {
     funnyImg.addEventListener('click', () => {
+      lightboxCtx.source = 'funny';
+      lightboxCtx.images = [];
       openLightbox(funnyImg.src);
     });
   }
@@ -450,6 +504,8 @@ function setupLightboxTriggers() {
   const storyImg = document.querySelector('.story-slide img');
   if (storyImg) {
     storyImg.addEventListener('click', () => {
+      lightboxCtx.source = 'story';
+      lightboxCtx.images = [];
       openLightbox(storyImg.src);
     });
   }
@@ -458,6 +514,10 @@ function setupLightboxTriggers() {
 // Close handlers
 lightboxDom.close.addEventListener('click', closeLightbox);
 lightboxDom.backdrop.addEventListener('click', closeLightbox);
+
+// Lightbox navigation
+lightboxDom.prev.addEventListener('click', () => lightboxNavigate('prev'));
+lightboxDom.next.addEventListener('click', () => lightboxNavigate('next'));
 
 /* ============================================
    Theme Toggle
