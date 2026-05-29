@@ -150,7 +150,7 @@ body {
   padding: 12px 28px;
   font-size: 0.95rem;
   font-weight: 600;
-  border-radius: var(--radius-sm);
+  border-radius: 6px;
   text-decoration: none;
   cursor: pointer;
   transition: all var(--transition);
